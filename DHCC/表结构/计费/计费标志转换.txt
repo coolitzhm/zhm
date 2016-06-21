@@ -1,0 +1,20 @@
+各个医嘱状态与账单状态的转换
+ToBill,Bill,Igore,ToRefund,Refund,Paid
+
+未计费医嘱 ToBill     医嘱计费 ToBill -> Billed
+
+
+ToRefund -> 由Bill转换成Refund(停止)/ Billed(核实)  ?
+
+Igore -> Billed
+
+停医嘱 Billed  -> Igore   需要退费   ->     R  已经退费
+
+ToBill -> Igore
+
+Paid  -> ToRefund
+
+门诊
+结算 Refund  -> Paid            paid  到I   已经退费
+
+Billed  -> Paid
